@@ -1,0 +1,278 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+  color: #000;
+  background: #f2f2f2;
+}
+
+/* HOMEPAGE */
+/* Landing page */
+.landing-page {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 90%;
+}
+/* Navbar */
+.landing-page .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: blue; */
+  height: 100%;
+}
+
+.landing-page .navbar a {
+  flex: 15%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  padding-left: 5rem;
+}
+
+.landing-page .navbar ul {
+  display: flex;
+  flex: 50%;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
+  list-style-type: none;
+  height: 100%;
+}
+.landing-page .navbar ul li a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2rem;
+}
+/* MAIN section of LANDING PAGE */
+.landing-page .hero-about {
+  padding-top: 5rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 2rem;
+  line-height: 3rem;
+  /* background: green; */
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+    "text text text text . ."
+    "text text text text . ."
+    ". . . . . ."
+    "maps maps maps maps maps maps"
+    "maps maps maps maps maps maps"
+    "maps maps maps maps maps maps";
+}
+.article-box-about {
+  grid-area: text;
+  /* background: yellow; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding-left: 5rem;
+}
+.article-box-about h1 {
+  font-size: 4rem;
+}
+.article-box-maps {
+  grid-area: maps;
+  /* background: green; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  justify-content: space-evenly;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.1);
+}
+.america {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+.asia {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  padding-right: 2rem;
+}
+.europe {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  padding-right: 2rem;
+}
+.america-photo {
+  flex: 90%;
+  width: 80%;
+  background: url("/img/america.jpg") no-repeat center center/cover;
+  border-radius: 5px;
+}
+.asia-photo {
+  flex: 90%;
+  width: 80%;
+  background: url("/img/asia.jpg") no-repeat center center/cover;
+  border-radius: 5px;
+}
+.europe-photo {
+  flex: 90%;
+  width: 80%;
+  background: url("/img/europe.jpg") no-repeat center center/cover;
+  border-radius: 5px;
+}
+.america-name {
+  flex: 10%;
+  text-align: center;
+  font-size: 2.5rem;
+  padding-top: 1.5rem;
+}
+.asia-name {
+  flex: 10%;
+  text-align: center;
+  font-size: 2.5rem;
+  padding-top: 1.5rem;
+}
+.europe-name {
+  flex: 10%;
+  text-align: center;
+  font-size: 2.5rem;
+  padding-top: 1.5rem;
+}
+/* MAIN */
+.main-box-about {
+  height: 100vh;
+  display: grid;
+  /* background: purple; */
+}
+
+.main-box-about {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 2rem;
+  line-height: 4rem;
+  padding: 3rem 0;
+  /* background: green; */
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "title title title title title ."
+    ". review-1 review-1 review-1 review-1 ."
+    ". review-1 review-1 review-1 review-1 ."
+    ". review-2 review-2 review-2 review-2 ."
+    ". review-2 review-2 review-2 review-2 .";
+}
+.main-box-title {
+  grid-area: title;
+
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2.5rem;
+}
+.review-box-1 {
+  grid-area: review-1;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+}
+.review-box-2 {
+  margin-top: 1.5rem;
+  grid-area: review-2;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+}
+.photo-review-1 {
+  background: url("/img/joe.jpg") no-repeat center center/cover;
+  width: 100%;
+  padding-right: 1.5rem;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.photo-review-2 {
+  background: url("/img/lisa.jpg") no-repeat center center/cover;
+  width: 100%;
+  padding-right: 1.5rem;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.name-1,
+.name-2 {
+  padding-left: 1.5rem;
+}
+.name-1 h1 {
+  font-size: 2rem;
+}
+.name-1 p {
+  font-size: 1.5rem;
+}
+.name-2 h1 {
+  font-size: 2rem;
+}
+.name-2 p {
+  font-size: 1.5rem;
+}
+.main-box-about i {
+  color: gold;
+}
+
+/* FOOTER */
+.footer {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+.footer i {
+  color: #000;
+}
+.follow,
+.social-icons {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.social-icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.follow {
+  font-size: 1.3rem;
+}

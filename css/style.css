@@ -1,0 +1,254 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+  color: #000;
+  background: #f2f2f2;
+}
+
+/* HOMEPAGE */
+/* Landing page */
+.landing-page {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 90%;
+  background: url("/img/venice.jpg") no-repeat center center/cover;
+}
+/* Navbar */
+.landing-page .navbar {
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: blue; */
+  height: 100%;
+}
+
+.landing-page .navbar a {
+  flex: 15%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  color: #f2f2f2;
+  padding-left: 5rem;
+}
+
+.landing-page .navbar ul {
+  display: flex;
+  flex: 50%;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
+  list-style-type: none;
+  height: 100%;
+}
+.landing-page .navbar ul li a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+}
+/* MAIN section of LANDING PAGE */
+.landing-page .hero {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+    "title title title title . ."
+    "icons icons icons icons . ."
+    ". . . . . ."
+    ". . . . . ."
+    ". . articles articles articles articles"
+    ". .  articles articles articles articles";
+  grid-gap: 1rem;
+  height: 100%;
+  font-size: 3rem;
+  line-height: 4rem;
+}
+
+.title {
+  padding-top: 5rem;
+  padding-left: 5rem;
+  grid-area: title;
+  color: #fff;
+  font-weight: lighter;
+}
+
+.icon-box,
+.location,
+.user,
+.guide {
+  grid-area: icons;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #fff;
+}
+.icon-box {
+  background: rgba(0, 0, 0, 0.3);
+}
+.article-box {
+  grid-area: articles;
+  background: rgba(0, 0, 0, 0.1);
+  color: #fff;
+  display: flex;
+}
+.text-1,
+.text-2,
+.text-3 {
+  padding-left: 1rem;
+  background: transparent;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+.article-1,
+.article-2 {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.article-1 {
+  padding-right: 1rem;
+}
+.photo-placeholder-1 {
+  background: url("/img/hero-1.jpg") no-repeat center center/cover;
+  flex: 1;
+  width: 50%;
+  align-self: flex-start;
+}
+.photo-placeholder-2 {
+  background: url("/img/hero-2.jpg") no-repeat center center/cover;
+  flex: 1;
+  width: 50%;
+  align-self: flex-start;
+}
+
+/* MAIN */
+.trip-locations {
+  height: 100vh;
+  display: grid;
+  /* background: pink; */
+  grid-template-columns: 1fr;
+  grid-template-rows: 30% 70%;
+}
+.title-main {
+  font-size: 2rem;
+  color: #000;
+  padding-left: 5rem;
+  padding-top: 3rem;
+  max-width: 60%;
+}
+.main-box {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "box-1 box-1 box-2 box-2"
+    "box-1 box-1 box-2 box-2"
+    "box-3 box-3 box-4 box-4"
+    "box-3 box-3 box-4 box-4";
+  margin: 0 5rem;
+}
+.box-1 {
+  grid-area: box-1;
+  background: rgb(92, 92, 250);
+  display: flex;
+  justify-content: space-around;
+  border-radius: 5px;
+}
+.box-2 {
+  grid-area: box-2;
+  background: rgb(253, 193, 114);
+  display: flex;
+  justify-content: space-around;
+  border-radius: 5px;
+}
+.box-3 {
+  grid-area: box-3;
+  background: rgb(252, 83, 252);
+  display: flex;
+  justify-content: space-around;
+  border-radius: 5px;
+}
+.box-4 {
+  grid-area: box-4;
+  background: rgb(207, 207, 58);
+  display: flex;
+  justify-content: space-around;
+  border-radius: 5px;
+}
+.name-1,
+.name-2,
+.name-3,
+.name-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 30%;
+  text-align: center;
+}
+
+.photo-1 {
+  background: url("/img/paris.jpg") no-repeat center center/cover;
+  width: 100%;
+  flex: 70%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.photo-2 {
+  background: url("/img/santorini.jpg") no-repeat center center/cover;
+  width: 100%;
+  flex: 70%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.photo-3 {
+  background: url("/img/bangkok.jpg") no-repeat center center/cover;
+  width: 100%;
+  flex: 70%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.photo-4 {
+  background: url("/img/london.jpg") no-repeat center center/cover;
+  width: 100%;
+  flex: 70%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+/* FOOTER */
+.footer {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+.footer i {
+  color: #000;
+}
+.follow,
+.social-icons {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.social-icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.follow {
+  font-size: 1.3rem;
+}
